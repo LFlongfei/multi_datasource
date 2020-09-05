@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    local:
+      username: root
+      password: root1234
+      jdbc-url: jdbc:mysql://localhost:3306/spring_security?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    remote:
+      username: root
+      password: root1234
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8088
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.longfei.multi_datasource.entity
